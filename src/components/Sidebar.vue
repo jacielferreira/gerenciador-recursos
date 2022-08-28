@@ -61,7 +61,7 @@ export default {
   },
   data: () => ({
     selectItem: null,
-    itemName: "",
+    itemName: "user",
     drawer: null,
   }),
   watch: {
@@ -69,6 +69,9 @@ export default {
       this.getMenuNavName(val)
 
     },
+  },
+  created(){
+    this.$store.dispatch('menu/navigate', this.itemName)
   },
   methods: {
     getMenuNavName: function (val) {
@@ -86,7 +89,7 @@ export default {
           this.itemName = "reports";
           break;
         default:
-          this.itemName = null;
+          this.itemName = 'user';
       }
       this.$store.dispatch('menu/navigate', this.itemName)
     },

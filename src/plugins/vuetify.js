@@ -21,7 +21,7 @@ export default new Vuetify({
       },
       dark: {
         primary: colors.blue.lighten3,
-        background: "#f3f3ff"
+        background: "#2C3A47"
       }
     }
   }
